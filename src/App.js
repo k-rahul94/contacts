@@ -29,9 +29,7 @@ class App extends Component {
     return (
       <div>
         <Route exact path="/" render={() => (
-          <ListContacts onDeleteContact={this.removeContact} contacts={this.state.contacts} onNavigate={() => this.setState(
-            { screen: 'create'}
-          )}/>
+          <ListContacts onDeleteContact={this.removeContact} contacts={this.state.contacts}/>
         )} />
         <Route path="/create" component={CreateContact} />
       </div>
